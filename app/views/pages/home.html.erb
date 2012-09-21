@@ -1,0 +1,11 @@
+Image Search
+
+<%= form_tag photos_path, :method => 'get' do %>	
+  <div class="field">
+    <%= text_field_tag :search, params[:search] %>
+  </div>
+
+  <div class="action">
+   <%= submit_tag "Search", :name => nil %>
+  </div>
+<% end %>

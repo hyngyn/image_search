@@ -46,7 +46,7 @@ h1, h2, h3, p{
 
 /* Layout */
 #navigation_menu{
-	background: #383838;
+	background: #140d0a;
 	height: 45px;
 	width: 100%;
   float: left;
@@ -59,7 +59,7 @@ h1, h2, h3, p{
   height: 200px;
   padding: 20px;
   margin: auto;
-  background: #2B2B2B;
+  background: #140d0a;
   margin-top: 50px;
 
   opacity:0.95;
@@ -73,7 +73,7 @@ h1, h2, h3, p{
 }
 
 #home_header{
-  margin-top: 25px;
+  margin-top: 10px;
   color: white;
   font-size: 28px;
 }

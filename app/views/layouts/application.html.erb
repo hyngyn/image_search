@@ -7,8 +7,16 @@
     <%= javascript_include_tag "application" %>
     <%# stylesheet_link_tag :all %>
     <%= stylesheet_link_tag 'custom', :media => 'screen' %>
-
     <%= csrf_meta_tags %>
+
+    <script>
+      $(document).ready(function() {
+          $('.photo_container').click(function(e){
+              $('#basic_modal').modal();
+          });
+      });​
+
+    </script>
   </head>
   
 

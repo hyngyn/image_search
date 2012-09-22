@@ -3,9 +3,12 @@
 <h2>photo id</h2>
 <% @photos.each do |photo| %>
 
-<%= image_tag 'http://farm' + photo.farm.to_s + '.static.flickr.com/' + photo.server.to_s + '/' + photo.id.to_s + '_' + photo.secret + '.jpg' %>
+<%= image_tag 'http://farm' + photo.farm.to_s + '.static.flickr.com/' + photo.server.to_s + '/' + photo.id.to_s + '_' + photo.secret.to_s + '_m.jpg' %>
 
-<% photo.id %>
+<%# Following line of code works, but is really slow %>
+<%# info = flickr.photos.getInfo(:photo_id => photo.id) %>
+<%# image_tag FlickRaw.url(info) %>
+
 <% end %>
 
 

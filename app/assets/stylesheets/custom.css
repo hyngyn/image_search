@@ -1,0 +1,98 @@
+/* Default */
+
+@font-face {
+  font-family: 'BariolRegularRegular';
+  src: url('fonts/bariol_regular-webfont.eot');
+  src: url('fonts/bariol_regular-webfont.svg#BariolRegularRegular') format('svg'),
+       url('fonts/bariol_regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/bariol_regular-webfont.woff') format('woff'),
+       url('fonts/bariol_regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+p{
+  /*Hack for Windows Anti-aliasing*/
+  text-shadow: 0 0 1px rgba(0,0,0,0.1);
+}
+
+
+html, body{
+  margin: 0;
+  font-family: 'BariolRegularRegular';
+  height: 100%;
+}
+
+h1, h2, h3, p{
+  margin: 0;
+}
+
+
+.round {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#img_bg{
+	background: url(bg1.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+  height: 100%;
+}
+
+
+/* Layout */
+#navigation_menu{
+	background: #383838;
+	height: 45px;
+	width: 100%;
+  float: left;
+}
+
+/* Home */
+
+#home_search_container{
+  width: 340px;
+  height: 200px;
+  padding: 20px;
+  margin: auto;
+  background: #2B2B2B;
+  margin-top: 50px;
+
+  opacity:0.95;
+  filter:alpha(opacity=95);/*  For IE8 and earlier */
+
+}
+
+#home_outer_container{
+  float: left;
+  width: 100%;
+}
+
+#home_header{
+  margin-top: 25px;
+  color: white;
+  font-size: 28px;
+}
+
+#search{
+  font-size: 14px;
+  padding: 4px;
+  margin-top: 15px;
+  background: white;
+  width: 272px;
+  height: 16px;
+  float: left;
+}
+
+#home_submit{
+  font-size: 14px;
+  height: 28px;
+  float: left;
+  margin-left: 10px;
+  margin-top: 15px;
+}
+

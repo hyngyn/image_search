@@ -3,18 +3,24 @@
 <html>
   <head>
     <title><%= title %></title>
-    <%# stylesheet_link_tag    "application", :media => "all" %>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= stylesheet_link_tag :all %>
+    <%= stylesheet_link_tag 'custom', :media => 'screen' %>
+
     <%= csrf_meta_tags %>
   </head>
+  
 
   <body>
+
+    <div id="navigation_menu">
+    </div>
 
     <%= yield %>
 
   </body>
 
-	<%= debug(params) if Rails.env.development? %>
+	<% debug(params) if Rails.env.development? %>
 
 </html>

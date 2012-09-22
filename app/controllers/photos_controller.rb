@@ -1,9 +1,12 @@
 class PhotosController < ApplicationController
 
   def index
-    @title = params[:search]
-    @photos = flickr.photos.search(:tags => params[:search])
-    
+    if params[:search].empty?
+      redirect_to root_path
+    else
+      @title = params[:search]
+      @photos = flickr.photos.search(:tags => params[:search])
+    end
  
  #   @info = []
  #   @photos.each do |photo|

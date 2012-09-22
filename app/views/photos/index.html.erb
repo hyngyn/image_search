@@ -2,19 +2,22 @@
 
 
 <% @photos.each do |photo| %>
+
+
   <%= link_to '#', :class => 'basic' do %>
     <div class="photo_container">
-
-      <%= image_tag 'http://farm' + photo.farm.to_s + '.static.flickr.com/' + photo.server.to_s + '/' + photo.id.to_s + '_' + photo.secret.to_s + '_m.jpg', :class=>"each_photo" %>
-
-
-<%# Following line of code works, but is really slow %>
-<%# info = flickr.photos.getInfo(:photo_id => photo.id) %>
-<%# image_tag FlickRaw.url(info) %>
+      <%= image_tag flickr_url(photo) %>
     </div>
   <% end %>
+
+<!--
+Jquery Target, click method Events
+
+-->
+  <div id="basic_modal">
+    <p><%= image_tag modal_url(photo), :class=>"modal_image" %></p>
+  </div>
+
 <% end %>
 
-<div id="basic_modal">
-<p>This is the sample pop up page.</p>
-</div>
+

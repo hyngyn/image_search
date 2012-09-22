@@ -75,22 +75,20 @@ h1, h2, h3, p{
 #home_header{
   margin: 10px auto 0 auto;
   color: white;
-  font-size: 28px;
+  font-size: 28px
 }
 
 #search{
-  font-size: 14px;
+  font-size: 18px;
   padding: 4px;
   margin-top: 15px;
   background: white;
   width: 272px;
-  height: 16px;
   float: left;
 }
 
 #home_submit{
-  font-size: 14px;
-  height: 28px;
+  font-size: 18px;
   float: left;
   margin-left: 10px;
   margin-top: 15px;

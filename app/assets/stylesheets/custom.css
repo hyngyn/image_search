@@ -73,7 +73,7 @@ h1, h2, h3, p{
 }
 
 #home_header{
-  margin-top: 10px;
+  margin: 10px auto 0 auto;
   color: white;
   font-size: 28px;
 }

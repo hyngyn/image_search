@@ -52,6 +52,10 @@ h1, h2, h3, p{
   float: left;
 }
 
+.body_container{
+  width: 100%;
+}
+
 /* Home */
 
 #home_search_container{
@@ -96,17 +100,20 @@ h1, h2, h3, p{
 }
 
 /* Photos Index */
-.photo_container{
+.each_photo_container{
   float: left;
   margin: 5px;
-  padding: 10px;
+  padding: 15px;
   background: #c7c7b9;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 }
 
-
+#photos_container{
+  width: 85%;
+  margin: auto;
+}
 
 
 /* Modal Overlay */

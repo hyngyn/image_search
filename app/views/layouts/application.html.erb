@@ -20,16 +20,24 @@
 
     <%= yield %>
 
-    <script>
- //     $(document).ready(function() {
- //         $('.photo_container').click(function(e){
- //             $('#basic_modal').modal();
- //         });
- //     });​
+<% if @title != "Home" %>
+<script>
+jQuery(function () {
+	// Changes innerHTML on click
+	$('.photo_container').click(function (e) {
+		$('#basic_modal').html("<p><%= image_tag modal_url(photo), :class=>'modal_image' %></p>");
 
-jQuery(function ($) {
+		return false;
+	});
+});
+</script>
+
+<% end %>
+
+    <script>
+
+jQuery(function () {
 	// Load dialog on page load
-	//$('#basic-modal-content').modal();
 
 	// Load dialog on click
 	$('.photo_container').click(function (e) {

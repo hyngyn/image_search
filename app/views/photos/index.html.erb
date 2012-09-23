@@ -4,7 +4,7 @@
 <% @photos.each do |photo| %>
 
 
-  <%= link_to '#', :class => 'basic' do %>
+  <%= link_to '#' do %>
     <div class="photo_container">
       <%= image_tag flickr_url(photo) %>
     </div>
@@ -14,8 +14,7 @@
 Jquery Target, click method Events
 
 -->
-  <div id="basic_modal">
-    <p><%= image_tag modal_url(photo), :class=>"modal_image" %></p>
+  <div id="basic_modal_container">
   </div>
 
 <% end %>

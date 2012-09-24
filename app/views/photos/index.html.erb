@@ -15,7 +15,7 @@
   <script>
   jQuery(function() {
     $('.each_photo_container').click(function (e) {
-      $('.basic_modal').html("<p><%= escape_javascript(image_tag p[:url]) %></p>");
+      $('#basic_modal').html("<p><%= escape_javascript(image_tag p[:url]) %></p>");
       return false;
     });
   });
@@ -23,7 +23,7 @@
 
   <% end %>
 
-  <div class="basic_modal">
+  <div id="basic_modal">
   </div>
 
 

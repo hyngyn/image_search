@@ -34,21 +34,17 @@
 
 
     <script>
+      jQuery(function () {
 
-jQuery(function () {
-	// Load dialog on page load
+	      // Load dialog on click
+	      $('.each_photo_container').click(function (e) {
+	      	$('#basic_modal').modal({
+          overlayClose:true
+          });
 
-
-
-	// Load dialog on click
-	$('.each_photo_container').click(function (e) {
-		$('.basic_modal').modal({
-    overlayClose:true
-    });
-
-		return false;
-	});
-});
+		      return false;
+	      });
+      });
 
     </script>
   </body>

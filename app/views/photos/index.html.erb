@@ -12,6 +12,14 @@
     <% end %>
 
   <!-- Jquery script for changing modal onClick -->
+  <script type="text/javascript">
+  jQuery(function() {
+    $('.each_photo_container').click(function (e) {
+      $('#basic_modal').html("<p><%= escape_javascript(image_tag p[:url]) %></p>");
+      return false;
+    });
+  });
+  </script>
 
 
 

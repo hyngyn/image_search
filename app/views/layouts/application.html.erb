@@ -20,17 +20,6 @@
 
 </script>
 
-  </head>
-  
-
-  <body>
-
-    <div id="navigation_menu">
-    </div>
-
-    <%= yield %>
-
-
     <script>
       jQuery(function () {
 
@@ -45,6 +34,18 @@
       });
 
     </script>
+  </head>
+  
+
+  <body>
+
+    <div id="navigation_menu">
+    </div>
+
+    <%= yield %>
+
+
+
   </body>
 
 	<%= debug(params) if Rails.env.development? %>

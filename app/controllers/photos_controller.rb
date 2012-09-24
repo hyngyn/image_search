@@ -20,8 +20,9 @@ class PhotosController < ApplicationController
       @photos_array = []
     
       @photos.each do |photo|
-        url = "http://farm#{photo.farm.to_s}.static.flickr.com/#{photo.server.to_s}/#{photo.id.to_s}_#{photo.secret.to_s}_z.jpg"
-        data = {:url=>url}
+        url = "http://farm#{photo.farm}.static.flickr.com/#{photo.server}/#{photo.id}_#{photo.secret}_z.jpg"
+        s_url = "http://farm#{photo.farm}.static.flickr.com/#{photo.server}/#{photo.id}_#{photo.secret}_m.jpg"
+        data = {:url=>url, :s_url=>s_url, :id => photo.id}
         @photos_array << data
       end
     end

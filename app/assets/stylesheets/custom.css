@@ -108,6 +108,7 @@ h1, h2, h3, p{
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
+
 }
 
 #photos_container{
@@ -116,13 +117,15 @@ h1, h2, h3, p{
 }
 
 
+
+
 /* Modal Overlay */
 .modal_image{
   max-width: 550px;
   max-height: 450px;
 }
 
-#basic_modal{
+.basic_modal{
   display: none;
 }
 
@@ -133,7 +136,7 @@ h1, h2, h3, p{
 }
 
 #simplemodal-container{
-  height:500px;
+  height:400px;
   width:800px;
   color:#bbb;
   background-color:#333;

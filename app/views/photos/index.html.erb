@@ -2,33 +2,40 @@
 
   <h1><%=params[:search]%></h1>
 
-  <div id="photos_container">
-  <% @photos_array.each do |p| %>
+    <div id="photos_container">
+    <% @photos_array.each do |p| %>
 
-    <%= link_to '#' do %>
-      <div class="each_photo_container">    
-        <%= image_tag p[:url] %>
-      </div>
+      <%= link_to '#' do %>
+        <<%="div class='each_photo_container' id='#{p[:id]}'" %>>
+          <%= image_tag p[:s_url] %>
+        </div>
+      <% end %>
+
+    <!-- Load Modal onClick -->
+    <script type="text/javascript">
+    jQuery(function() {
+      $('#<%=p[:id]%>').click(function (e) {
+
+        //edit innerHTML of basic_modal
+        $('.basic_modal').html("<p><%= escape_javascript(image_tag p[:url]) %></p>");
+
+        //load modal
+	      $('.basic_modal').modal({
+          overlayClose:true
+        });
+
+        return false;
+      });
+    });
+
+    </script>
+
+
+
     <% end %>
 
-  <!-- Jquery script for changing modal onClick -->
-  <script type="text/javascript">
-  jQuery(function() {
-    $('.each_photo_container').click(function (e) {
-      $('#basic_modal').html("<p><%= escape_javascript(image_tag p[:url]) %></p>");
-      return false;
-    });
-  });
-  </script>
-
-
-
-  <% end %>
-
-  <div id="basic_modal">
-   <p>Test</p>
-  </div>
-
+    <div class="basic_modal">
+    </div>
 
   </div>
 </div>

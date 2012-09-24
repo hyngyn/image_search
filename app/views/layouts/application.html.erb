@@ -5,10 +5,10 @@
     <title><%= title %></title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
-    <%= javascript_include_tag :all %>
     <%= stylesheet_link_tag 'custom', :media => 'screen' %>
     <%= csrf_meta_tags %>
 
+     <!-- Masonry/Pinterest Layout -->
      <script type="text/javascript">
       $(function () {
       var $container = $('#photos_container');
@@ -18,22 +18,8 @@
           });
         });
       });
-    </script>
+     </script>
 
-     <script type="text/javascript">
-      jQuery(function () {
-
-	      // Load dialog on click
-	      $('.each_photo_container').click(function (e) {
-	      	$('#basic_modal').modal({
-          overlayClose:true
-          });
-
-		      return false;
-	      });
-      });
-
-    </script>
   </head>
   
 

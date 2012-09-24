@@ -102,17 +102,13 @@ h1, h2, h3, p{
 /* Photos Index */
 .each_photo_container{
   float: left;
-  margin: 5px;
-  padding: 15px;
-  background: #c7c7b9;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
+  margin: 10px;
+
 
 }
 
 #photos_container{
-  width: 85%;
+  width: 90%;
   margin: auto;
 }
 
@@ -120,9 +116,10 @@ h1, h2, h3, p{
 
 
 /* Modal Overlay */
-.modal_image{
-  max-width: 550px;
-  max-height: 450px;
+#modal_image{
+  float: left;
+  max-width: 400px;
+  max-height: 300px;
 }
 
 .basic_modal{
@@ -136,7 +133,7 @@ h1, h2, h3, p{
 }
 
 #simplemodal-container{
-  height:400px;
+  height:500px;
   width:800px;
   color:#bbb;
   background-color:#333;

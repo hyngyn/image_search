@@ -17,7 +17,10 @@
       $('#<%=p[:id]%>').click(function (e) {
 
         //edit innerHTML of basic_modal
-        $('.basic_modal').html("<p><%= escape_javascript(image_tag p[:url]) %></p>");
+        $('.basic_modal').html(
+          "<div id='modal_image'><%= escape_javascript(image_tag p[:url]) %></div>"
+
+         );
 
         //load modal
 	      $('.basic_modal').modal({

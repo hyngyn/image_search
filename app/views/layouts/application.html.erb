@@ -19,7 +19,20 @@
       });
     </script>
 
+    <script>
+      jQuery(function () {
 
+	      // Load dialog on click
+	      $('.each_photo_container').click(function (e) {
+	      	$('#basic_modal').modal({
+          overlayClose:true
+          });
+
+		      return false;
+	      });
+      });
+
+    </script>
   </head>
   
 

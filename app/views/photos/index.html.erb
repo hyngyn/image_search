@@ -12,33 +12,13 @@
     <% end %>
 
   <!-- Jquery script for changing modal onClick -->
-  <script>
-  jQuery(function() {
-    $('.each_photo_container').click(function (e) {
-      $('#basic_modal').html("<p><%= escape_javascript(image_tag p[:url]) %></p>");
-      return false;
-    });
-  });
-  </script>
 
-    <script>
-      jQuery(function () {
 
-	      // Load dialog on click
-	      $('.each_photo_container').click(function (e) {
-	      	$('#basic_modal').modal({
-          overlayClose:true
-          });
-
-		      return false;
-	      });
-      });
-
-    </script>
 
   <% end %>
 
   <div id="basic_modal">
+   <p>Test</p>
   </div>
 
 

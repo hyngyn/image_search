@@ -12,7 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.masonry.min
-//= require jquery.simplemodal-1.4.3
 //= require_tree .
 

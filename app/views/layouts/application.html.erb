@@ -9,7 +9,8 @@
     <%= stylesheet_link_tag 'custom', :media => 'screen' %>
     <%= csrf_meta_tags %>
 <script>
-$(function () {
+
+  $(function () {
   var $container = $('#photos_container');
     $container.imagesLoaded(function(){
       $container.masonry({
@@ -30,29 +31,18 @@ $(function () {
 
     <%= yield %>
 
-<%# FIX @title TO GET SCRIPT TO WORK %>
-<% if @title == "Ho2me" %>
-<script>
-jQuery(function () {
-	// Changes innerHTML on click
-	$('.photo_container').click(function (e) {
-		$('#basic_modal').html("<p><%= image_tag modal_url(photo), :class=>'modal_image' %></p>");  
 
-		return false;
-	});
-});
-</script>
-
-<% end %>
 
     <script>
 
 jQuery(function () {
 	// Load dialog on page load
 
+
+
 	// Load dialog on click
-	$('.photo_container').click(function (e) {
-		$('#basic_modal').modal({
+	$('.each_photo_container').click(function (e) {
+		$('.basic_modal').modal({
     overlayClose:true
     });
 
@@ -63,6 +53,6 @@ jQuery(function () {
     </script>
   </body>
 
-	<% debug(params) if Rails.env.development? %>
+	<%= debug(params) if Rails.env.development? %>
 
 </html>

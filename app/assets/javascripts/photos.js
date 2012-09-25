@@ -19,7 +19,7 @@
 
             //edit innerHTML of basic_modal
             $('.basic_modal').html(
-              "<div id='modal_image'><%= escape_javascript(image_tag p[:url]) %></div><div id='photo_title'><%= data[:title]%></div>"
+              "<div id='modal_image'><%= escape_javascript(image_tag p[:url]) %></div><div id='photo_title'><%=%></div>"
              );
 
             //load modal

@@ -31,7 +31,6 @@ class PhotosController < ApplicationController
 
   def fetch_info
     @info = flickr.photos.getInfo(:photo_id => params[:id], :secret=> params[:secret])
-
  
     respond_to do |format|
       format.json { render :json => @info }

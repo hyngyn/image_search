@@ -156,4 +156,7 @@ h1, h2, h3, p{
   clear: left;
 }
 
+#googlemap_image{
+  float: right;
+}
 

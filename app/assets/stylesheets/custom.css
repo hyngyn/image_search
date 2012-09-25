@@ -140,13 +140,20 @@ h1, h2, h3, p{
 /* Modal Page */
 #modal_image img{
   float: left;
+  margin: auto;
   max-width: 450px;
   max-height: 300px;
 }
 
-#photo_title{
+#modal_photo_info_container{
   float: left;
   clear: left;
-  color: white;
+  width: 45%;
 }
+
+#modal_photo_attr{
+  float: left;
+  clear: left;
+}
+
 

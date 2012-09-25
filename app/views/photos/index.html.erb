@@ -3,11 +3,11 @@
   <h1><%=params[:search]%></h1>
 
     <div id="photos_container">
-    <% @photos_array.each do |p| %>
+    <% @photos_array.each do |photo| %>
 
       <%= link_to '#' do %>
-        <div class='each_photo_container', id='<%="#{p[:id]}"%>' >
-          <%= image_tag p[:s_url] %>
+        <div class='each_photo_container', id='<%="#{photo[:id]}"%>' >
+          <%= image_tag photo[:s_url] %>
         </div>
       <% end %>
  
@@ -15,12 +15,12 @@
     <!-- Load Modal onClick -->
     <script type="text/javascript">
     jQuery(function() {
-      $('#<%=p[:id]%>').click(function (e) {
+      $('#<%=photo[:id]%>').click(function (e) {
         
         //ajax call to fetch photo info
         
-        var fetch_id = '<%=p[:id]%>';
-        var fetch_secret = '<%=p[:secret]%>';  
+        var fetch_id = '<%=photo[:id]%>';
+        var fetch_secret = '<%=photo[:secret]%>';  
 
         $.ajax({
           type: 'GET',
@@ -29,13 +29,25 @@
           data: { 'id' : fetch_id, 'secret' : fetch_secret },
           success: function(data){
 
-            console.log(data)
-            console.log(data.title)
- 
 
             //edit innerHTML of basic_modal
             $('.basic_modal').html(
-              "<div id='modal_image'><%= escape_javascript(image_tag p[:url]) %></div><div id='photo_title'><%= %></div>"
+              "<div id='modal_image'>"+
+                "<%= escape_javascript(image_tag photo[:url]) %>"+
+              "</div>"+
+
+              "<div id='modal_photo_info_container'>"+
+                 "<div class='modal_photo_attr'>"
+                    +data.title+ 
+                 "</div>"+ 
+                 "<div class='modal_photo_attr'>"+
+                    "By: " +data.owner.username+ 
+                 "</div>"+ 
+                 "<div class='modal_photo_attr'>"
+                    +data.location.region._content+ ", " +data.location.country._content+ 
+                 "</div>"+
+              "</div>" 
+
              );
 
             //load modal

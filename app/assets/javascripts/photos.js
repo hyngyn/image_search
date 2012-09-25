@@ -1,10 +1,10 @@
-   jQuery(function() {
-      $('#<%=p[:id]%>').click(function (e) {
+    jQuery(function() {
+      $('#<%=photo[:id]%>').click(function (e) {
         
         //ajax call to fetch photo info
         
-        var fetch_id = '<%=p[:id]%>';
-        var fetch_secret = '<%=p[:secret]%>';  
+        var fetch_id = '<%=photo[:id]%>';
+        var fetch_secret = '<%=photo[:secret]%>';  
 
         $.ajax({
           type: 'GET',
@@ -19,7 +19,7 @@
 
             //edit innerHTML of basic_modal
             $('.basic_modal').html(
-              "<div id='modal_image'><%= escape_javascript(image_tag p[:url]) %></div><div id='photo_title'><%=%></div>"
+              "<div id='modal_image'><%= escape_javascript(image_tag photo[:url]) %></div><div id='photo_info_container'>" + data.title + "</div>"
              );
 
             //load modal

@@ -116,11 +116,7 @@ h1, h2, h3, p{
 
 
 /* Modal Overlay */
-#modal_image{
-  float: left;
-  max-width: 400px;
-  max-height: 300px;
-}
+
 
 .basic_modal{
   display: none;
@@ -133,10 +129,24 @@ h1, h2, h3, p{
 }
 
 #simplemodal-container{
-  height:500px;
+  height:450px;
   width:880px;
   color:#bbb;
   background-color:#333;
   border:4px solid #444;
   padding:12px;
 }
+
+/* Modal Page */
+#modal_image img{
+  float: left;
+  max-width: 450px;
+
+}
+
+#photo_title{
+  float: left;
+  clear: left;
+  color: white;
+}
+

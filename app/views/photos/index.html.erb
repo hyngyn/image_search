@@ -15,10 +15,24 @@
     <script type="text/javascript">
     jQuery(function() {
       $('#<%=p[:id]%>').click(function (e) {
+        
+        //ajax call to fetch photo info
+       // $.ajax("/photos/fetch_info");
+        
+        var fetch_id = $('<%=p[:id]%>');
+        var fetch_secret = $('<%=p[:secret]%>');
+
+        $.ajax({
+          type: 'GET',
+          url: '/photos/fetch_info',
+          dataType: 'json',
+          data: { id: fetch_id.val(), secret: fetch_secret.val() } 
+        });
+
 
         //edit innerHTML of basic_modal
         $('.basic_modal').html(
-          "<div id='modal_image'><%= escape_javascript(image_tag p[:url]) %></div>"
+          "<div id='modal_image'><%= escape_javascript(image_tag p[:url]) %></div><div id='photo_title'><p><%= @photo_title%></p></div>"
 
          );
 

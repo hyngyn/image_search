@@ -1,5 +1,4 @@
 class PhotosController < ApplicationController
-
   def index
     jUpdate
   end
@@ -31,11 +30,23 @@ class PhotosController < ApplicationController
   end
 
   def fetch_info
-      info = flickr.photos.getInfo(:photo_id => params[:id], :secret=> params[:secret])
 
-      respond_to do |format|
-        format.json { render :json=> "success" }
-      end
+    @info = flickr.photos.getInfo(:photo_id => params[:id], :secret=> params[:secret])
+
+    #delete @photo_info later
+    @photo_info = {:title => @info.title,
+                  :username => @info.owner.username,
+                  :url => @info.urls.first._content,
+                  :latitude => @info.location.latitude,
+                  :longitude => @info.location.longitude,
+                  :region => @info.location.region._content,
+                  :country => @info.location.country._content}
+ 
+   respond_to do |format|
+     format.json { render :json => @info }
+   end
+   puts @info.to_json
+
   end
 
  

@@ -141,7 +141,7 @@ h1, h2, h3, p{
 #modal_image img{
   float: left;
   max-width: 450px;
-
+  max-height: 300px;
 }
 
 #photo_title{

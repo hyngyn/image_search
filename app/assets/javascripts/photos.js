@@ -1,20 +1,4 @@
-<div class="body_container">
-
-  <h1><%=params[:search]%></h1>
-
-    <div id="photos_container">
-    <% @photos_array.each do |p| %>
-
-      <%= link_to '#' do %>
-        <div class='each_photo_container', id='<%="#{p[:id]}"%>' >
-          <%= image_tag p[:s_url] %>
-        </div>
-      <% end %>
- 
-
-    <!-- Load Modal onClick -->
-    <script type="text/javascript">
-    jQuery(function() {
+   jQuery(function() {
       $('#<%=p[:id]%>').click(function (e) {
         
         //ajax call to fetch photo info
@@ -51,15 +35,3 @@
         return false;
       });
     });
-
-    </script>
-
-
-
-    <% end %>
-
-    <div class="basic_modal">
-    </div>
-
-  </div>
-</div>

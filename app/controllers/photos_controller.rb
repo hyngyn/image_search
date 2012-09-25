@@ -42,10 +42,10 @@ class PhotosController < ApplicationController
                   :region => @info.location.region._content,
                   :country => @info.location.country._content}
  
-   respond_to do |format|
-     format.json { render :json => @info }
-   end
-   puts @info.to_json
+    respond_to do |format|
+      format.json { render :json => @info }
+    end
+
 
   end
 

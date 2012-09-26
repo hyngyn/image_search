@@ -14,7 +14,7 @@
         <% end %>
         </div>
 
-     <!-- Masonry/Pinterest Layout + Infinite Scroll/Pagination -->
+     <!-- Masonry/Pinterest Layout + InfiniteScroll/Pagination -->
      <script type="text/javascript">
       $(function () {
 
@@ -26,8 +26,8 @@
           });
         });
         
-
-
+        
+       /*
         $container.infinitescroll({
           navSelector  : 'div.#page_navigation',            
                   // selector for the paged navigation (it will be hidden)
@@ -42,14 +42,15 @@
             var $newElems = $(newElements).css({ opacity: 0 });
             $newElems.imagesLoaded(function(){
               $newElems.animate({ opacity: 1 });
-              $container.masonry('appended', $newElems,true);
+              $newElems.attr('id', this.id);
+              $container.masonry('appended', $newElems, true);
 
-              $newElems.attr('id', '<%=photo[:id]%>'); //not appending correct ID
+
             });
           }
 
         );
-
+       */
 
 
 
@@ -72,8 +73,7 @@
           dataType: 'json',
           data: { 'id' : fetch_id, 'secret' : fetch_secret },
           success: function(data){
-      
-             
+                           
             //edit innerHTML of basic_modal
             $('.basic_modal').html(
 
@@ -101,6 +101,8 @@
 
              );
 
+
+
             //load modal
             $('.basic_modal').modal({
               overlayClose:true
@@ -121,12 +123,24 @@
 
     <% end %>
 
+   
+
     <div class="basic_modal">
     </div>
 
   </div><!--End photos_container-->
   
   <div id="page_navigation">
-  <%= link_to "Next", {:controller => "photos", :action => "index", :page => @page.to_i+1, :search => params[:search]}%>
+
+    <% if @page.to_i != 1 || @page.to_i != 0 %>
+      <div id="back_button">
+        <%= link_to "<<Back", {:controller => "photos", :action => "index", :page => @page.to_i-1, :search => params[:search]}%>
+      </div>
+    <% end %>
+
+    <div id="next_button">
+      <%= link_to "Next>>", {:controller => "photos", :action => "index", :page => @page.to_i+1, :search => params[:search]}%>
+    </div>
+
   </div>
 </div>

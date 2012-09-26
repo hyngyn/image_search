@@ -28,6 +28,11 @@ h1, h2, h3, p{
   margin: 0;
 }
 
+a{
+  text-decoration: none;
+  font-size: 20px;
+}
+
 
 .round {
 	-moz-border-radius: 10px;
@@ -120,9 +125,20 @@ h1, h2, h3, p{
 #index_header{
   width: 70%;
   margin: auto ;
-
 }
 
+#page_navigation{
+  width: 70%;
+  margin: auto ;
+}
+
+#back_button{
+  float: left;
+}
+
+#next_button{
+  float: right;
+}
 
 /* Modal Overlay */
 

@@ -23,6 +23,7 @@ class PhotosController < ApplicationController
         @photos_array << data
       end
     end
+
   end
 
 

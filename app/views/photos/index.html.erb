@@ -132,14 +132,14 @@
   
   <div id="page_navigation">
 
-    <% if @page.to_i != 1 || @page.to_i != 0 %>
+    <% if @page.to_i > 1 %>
       <div id="back_button">
-        <%= link_to "<<Back", {:controller => "photos", :action => "index", :page => @page.to_i-1, :search => params[:search]}%>
+        <%= link_to "Back", {:controller => "photos", :action => "index", :page => @page.to_i-1, :search => params[:search]}%>
       </div>
     <% end %>
 
     <div id="next_button">
-      <%= link_to "Next>>", {:controller => "photos", :action => "index", :page => @page.to_i+1, :search => params[:search]}%>
+      <%= link_to "Next", {:controller => "photos", :action => "index", :page => @page.to_i+1, :search => params[:search]}%>
     </div>
 
   </div>

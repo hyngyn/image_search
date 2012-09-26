@@ -1,7 +1,7 @@
 class PhotosController < ApplicationController
   def index
     @page = params[:page] || 1
-    @per_page = params[:per_page] || 20
+    @per_page = params[:per_page] || 40
 
 
     if params[:search].empty?

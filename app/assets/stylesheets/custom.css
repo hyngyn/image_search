@@ -21,6 +21,7 @@ html, body{
   margin: 0;
   font-family: 'BariolRegularRegular';
   height: 100%;
+  background: #F6F6F6;
 }
 
 h1, h2, h3, p{
@@ -49,11 +50,12 @@ h1, h2, h3, p{
 	background: #140d0a;
 	height: 45px;
 	width: 100%;
-  float: left;
 }
 
 .body_container{
   width: 100%;
+  margin-top: 15px;
+
 }
 
 /* Home */
@@ -103,16 +105,23 @@ h1, h2, h3, p{
 .each_photo_container{
   float: left;
   margin: 10px;
+}
 
-
+.each_photo_container img{
+  width: 200px;
 }
 
 #photos_container{
-  width: 86%;
+  width: 70%;
+  margin-top: 10px;
   margin: auto;
 }
 
+#index_header{
+  width: 70%;
+  margin: auto ;
 
+}
 
 
 /* Modal Overlay */

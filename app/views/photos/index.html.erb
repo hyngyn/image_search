@@ -1,8 +1,10 @@
 <div class="body_container">
 
-  <h1><%=params[:search]%></h1>
+  <div id="index_header">
+    <h1>Let's look at <%=params[:search]%>:</h1>
+  </div>
 
-    <div id="photos_container">
+  <div id="photos_container">
     <% @photos_array.each do |photo| %>
 
       <%= link_to '#' do %>

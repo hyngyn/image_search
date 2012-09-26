@@ -1,20 +1,15 @@
 class PhotosController < ApplicationController
   def index
-    jUpdate
-  end
+    @page = params[:page] || 1
+    @per_page = params[:per_page] || 20
 
-
-
-  def jUpdate
-    page = params[:page] || 1
-    per_page = params[:per_page] || 20
 
     if params[:search].empty?
       redirect_to root_path
     else
       @title = params[:search]
       @photos  = flickr.photos.search(:tags => params[:search], :has_geo => 1, 
-                                      :per_page => per_page, :page => page)
+                                      :per_page => @per_page, :page => @page)
       
       @photos_array = []
     
@@ -28,6 +23,7 @@ class PhotosController < ApplicationController
       end
     end
   end
+
 
   def fetch_info
     @info = flickr.photos.getInfo(:photo_id => params[:id], :secret=> params[:secret])

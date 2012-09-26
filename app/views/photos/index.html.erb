@@ -81,5 +81,9 @@
     <div class="basic_modal">
     </div>
 
+  </div><!--End photos_container-->
+  
+  <div id="page_navigation">
+  <%= link_to "Next", {:controller => "photos", :action => "index", :page => @page.to_i+1, :search => params[:search]}%>
   </div>
 </div>

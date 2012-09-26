@@ -7,6 +7,7 @@
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag "jquery" %>
     <%= javascript_include_tag "jquery.masonry.min" %>
+    <%= javascript_include_tag "jquery.infinitescroll.min" %>
     <%= javascript_include_tag "jquery.simplemodal-1.4.3" %>
     <%= stylesheet_link_tag 'custom', :media => 'screen' %>
     <%= csrf_meta_tags %>
@@ -23,6 +24,20 @@
       });
      </script>
 
+     <!-- Infinite Scroll for Pagination -->
+     <script type="text/javascript">
+    jQuery(function() {
+       $('#photos_container').infinitescroll({
+ 
+         navSelector  : "#page_navigation",            
+                   // selector for the paged navigation (it will be hidden)
+         nextSelector : "#page_navigation a",    
+                   // selector for the NEXT link (to page 2)
+         itemSelector : ".each_photos_container"          
+                   // selector for all items you'll retrieve
+       });
+       });
+     </script>
   </head>
   
 

@@ -108,7 +108,7 @@ h1, h2, h3, p{
 }
 
 #photos_container{
-  width: 90%;
+  width: 86%;
   margin: auto;
 }
 
@@ -130,7 +130,7 @@ h1, h2, h3, p{
 
 #simplemodal-container{
   height:450px;
-  width:880px;
+  width:830px;
   color:#bbb;
   background-color:#333;
   border:4px solid #444;
@@ -141,7 +141,7 @@ h1, h2, h3, p{
 #modal_image img{
   float: left;
   margin: auto;
-  max-width: 450px;
+  max-width: 400px;
   max-height: 300px;
 }
 

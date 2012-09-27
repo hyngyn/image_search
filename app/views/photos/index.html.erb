@@ -67,6 +67,9 @@
         var fetch_id = '<%=photo[:id]%>';
         var fetch_secret = '<%=photo[:secret]%>';  
 
+        $.ajaxSetup({ cache: false });
+
+
         $.ajax({
           type: 'GET',
           url: '/photos/fetch_info',
@@ -76,10 +79,11 @@
 
 
             //second AJAX call to Google Place API for hotels
+            /*
             $.ajax({
              type: 'GET',
-              url: 'https://maps.googleapis.com/maps/api/place/search/xml',
-              dataType: 'xml',
+              url: 'https://maps.googleapis.com/maps/api/place/search/json',
+              dataType: 'json',
               data: {
                'location' : data.location.latitude+","+data.location.longitude,
                'radius' : 500,
@@ -92,6 +96,7 @@
                 console.log(hotel);
               }
             });
+            */
                            
             //edit innerHTML of basic_modal
             $('.basic_modal').html(
@@ -151,6 +156,7 @@
   
   <div id="page_navigation">
 
+    <!-- Disable Back button if page 1 -->
     <% if @page.to_i > 1 %>
       <div id="back_button">
         <%= link_to "Back", {:controller => "photos", :action => "index", :page => @page.to_i-1, :search => params[:search]}%>
@@ -166,4 +172,5 @@
     </div>
 
   </div>
+
 </div>

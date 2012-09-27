@@ -43,6 +43,10 @@ a:hover{
   color: #0084FA;
 }
 
+a img {
+  border:0
+}
+
 
 .round {
 	-moz-border-radius: 10px;
@@ -120,11 +124,6 @@ a:hover{
 .each_photo_container{
   float: left;
   margin: 8px;
-}
-
-.each_photo_container a img{
-  text-decoration: none;
-  color: #F6F6F6;
 }
 
 .each_photo_container img{

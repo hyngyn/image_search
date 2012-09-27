@@ -121,17 +121,22 @@ a:hover{
   margin: 8px;
 }
 
+.each_photo_container a img{
+  text-decoration: none;
+}
 
 .each_photo_container img{
   width: 214px;
   text-decoration: none;
 }
 
+
 #photos_container{
   width: 70%;
   margin-top: 10px;
   margin: auto;
   text-decoration: none;
+
 }
 
 #index_header{

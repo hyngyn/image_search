@@ -125,7 +125,7 @@ a:hover{
   text-decoration: none;
 }
 
-.each_photo_container img{
+.each_photo_container a img{
   width: 214px;
 }
 

@@ -37,4 +37,21 @@ class PhotosController < ApplicationController
   end
 
 
+#  def fetch_hotel
+#    google_url = "https://maps.googleapis.com/maps/api/place/search/json?location=" + params[:location] + "&radius=" + params[:radius] + "&key=" + params[:key] + "&sensor=false&types=lodging"
+   
+#    puts google_url
+#    x = %Q{"admin=true"}
+
+#    @hotels = Hash.from_xml(%x{curl -d "#{x}" "https://maps.googleapis.com/maps/api/place/search/json?location=30.000,30.000&radius=500&key=AIzaSyChTo6XTAUpKdgUtgY0xH4FSO-fzfR8WsE&sensor=false&types=lodging"} ) rescue nil
+
+#    puts @hotels
+#    puts "WINNER"
+
+
+#    respond_to do |format|
+#      format.json { render :json => @hotels }
+#    end
+#  end
+
 end

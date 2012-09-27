@@ -30,7 +30,16 @@ h1, h2, h3, p{
 
 a{
   text-decoration: none;
-  font-size: 20px;
+  font-size: 30px;
+  color: #3232c7;
+}
+
+a:visited{
+  color: #3232c7;
+}
+
+a:hover{
+  color: #0084FA;
 }
 
 
@@ -109,11 +118,11 @@ a{
 /* Photos Index */
 .each_photo_container{
   float: left;
-  margin: 10px;
+  margin: 8px;
 }
 
 .each_photo_container img{
-  width: 200px;
+  width: 214px;
 }
 
 #photos_container{
@@ -154,7 +163,7 @@ a{
 }
 
 #simplemodal-container{
-  height:450px;
+  height:470px;
   width:830px;
   color:#bbb;
   background-color:#333;

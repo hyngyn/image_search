@@ -1,21 +1,3 @@
-<div class="body_container">
-
-  <div id="index_header">
-    <h1>Let's look at <%=params[:search]%>:</h1>
-  </div>
-
-  <div id="photos_container">
-    <% @photos_array.each do |photo| %>
-
-      <%= content_tag "div", :class => "each_photo_container", :id => photo[:id], :data=>{:id=>photo[:id], :secret=>photo[:secret]} do %>
-        <%= link_to '#' do %>
-          <%= image_tag photo[:s_url] %>
-        <% end %>
-      <% end %>
-
-
-    <!-- Load Modal onClick -->
-    <script type="text/javascript">
     jQuery(function() {
       $('#<%=photo[:id]%>').click(function (e) {
         
@@ -100,37 +82,3 @@
         return false;
       });
     });
-
-    </script>
-
-
-
-    <% end %>
-
-   
-
-    <div class="basic_modal">
-    </div>
-
-  </div><!--End photos_container-->
-  
-  <div id="page_navigation">
-
-    <!-- Disable Back button if page 1 -->
-    <% if @page.to_i > 1 %>
-      <div id="back_button">
-        <%= link_to "Back", {:controller => "photos", :action => "index", :page => @page.to_i-1, :search => params[:search]}%>
-      </div>
-    <% else %>
-      <div id="disabled_back_button">
-        <p>Back</p>
-      </div>
-    <% end %>
-
-    <div id="next_button">
-      <%= link_to "Next", {:controller => "photos", :action => "index", :page => @page.to_i+1, :search => params[:search]}%>
-    </div>
-
-  </div>
-
-</div>

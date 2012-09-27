@@ -201,6 +201,15 @@ a img {
   clear: left;
 }
 
+#google_map_location_container{
+  float: right;
+}
+
+#modal_photo_location{
+  float: left;
+  clear: right;
+}
+
 #googlemap_image{
   float: right;
 }

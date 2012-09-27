@@ -73,6 +73,17 @@
           dataType: 'json',
           data: { 'id' : fetch_id, 'secret' : fetch_secret },
           success: function(data){
+
+            //second AJAX call to Google Place API for hotels
+            $.ajax({
+              type: 'GET',
+              url:"https://maps.googleapis.com/maps/api/place/search/json?location=" + data.location.latitude + "," + data.location.longitude + "&keyword=hotel&sensor=false&radius=500" + "&key=AIzaSyCWlU__w-1ae4ipA-j4oy0AFFJ_H8W5Cgc",
+              dataType: 'json',
+              data: { 'id' : fetch_id, 'secret' : fetch_secret },
+              success: function(hotel){
+                console.log(hotel);
+              }
+            });
                            
             //edit innerHTML of basic_modal
             $('.basic_modal').html(

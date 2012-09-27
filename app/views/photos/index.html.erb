@@ -155,6 +155,10 @@
       <div id="back_button">
         <%= link_to "Back", {:controller => "photos", :action => "index", :page => @page.to_i-1, :search => params[:search]}%>
       </div>
+    <% else %>
+      <div id="disabled_back_button">
+        <p>Back</p>
+      </div>
     <% end %>
 
     <div id="next_button">

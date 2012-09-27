@@ -149,6 +149,12 @@ a:hover{
   float: right;
 }
 
+#disabled_back_button{
+  float: left;
+  color: #7E7E7E;
+  font-size: 30px;
+}
+
 /* Modal Overlay */
 
 
@@ -192,5 +198,11 @@ a:hover{
 
 #googlemap_image{
   float: right;
+}
+
+/*Footer*/
+
+#footer{
+  height: 50px;
 }
 

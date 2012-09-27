@@ -121,11 +121,11 @@ a:hover{
   margin: 8px;
 }
 
-.each_photo_container a{
+.each_photo_container a img{
   text-decoration: none;
 }
 
-.each_photo_container a img{
+.each_photo_container img{
   width: 214px;
 }
 

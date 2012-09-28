@@ -4,7 +4,7 @@ class PhotosController < ApplicationController
 
     #variables for pagination
     @page = params[:page] || 1
-    @per_page = params[:per_page] || 40
+    @per_page = params[:per_page] || 20
 
 
     if params[:search].empty?
@@ -33,13 +33,13 @@ class PhotosController < ApplicationController
   # Output: photo information as JSON
 
   def fetch_info
-
-    @info = flickr.photos.getInfo(:photo_id => params[:id], :secret=> params[:secret])
+    if (params[:id])
+      @info = flickr.photos.getInfo(:photo_id => params[:id], :secret=> params[:secret])
  
-    respond_to do |format|
-      format.json { render :json => @info }
+      respond_to do |format|
+        format.json { render :json => @info }
+      end
     end
-
   end
 
 

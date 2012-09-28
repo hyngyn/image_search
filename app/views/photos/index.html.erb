@@ -12,8 +12,8 @@
  
       <!--Div for each photo with embedded data-->
       <%= content_tag "div", :class => "each_photo_container", :id => photo[:id], :data=>{:id=>photo[:id], :secret=>photo[:secret], :farm=>photo[:farm], :server=>photo[:server]} do %>
-        <%= link_to '#' do %>
-          <%= image_tag photo[:s_url] %>
+        <%= link_to '#', :onclick => 'clickModal(\''+photo[:id].to_s+'\', \''+photo[:secret].to_s+'\', \''+photo[:farm].to_s+'\', \''+photo[:server].to_s+'\')' do %>
+          <%= image_tag photo[:s_url]  %>
         <% end %>
       <% end %>
 

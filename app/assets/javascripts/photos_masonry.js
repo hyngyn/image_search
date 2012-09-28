@@ -17,8 +17,9 @@ $(function () {
             // selector for the paged navigation (it will be hidden)
     nextSelector : '#next_button a',    
             // selector for the NEXT link (to page 2)
-    itemSelector : '.each_photo_container'          
+    itemSelector : '.each_photo_container',
              // selector for all items you'll retrieve
+    bufferPx: 40
 
   },
   //trigger masonry on infinitescroll callback and add id to div
@@ -31,11 +32,8 @@ $(function () {
         $newElems.attr('data-server', this.server);
         $newElems.attr('data-farm', this.farm);
 
-        //reload photos_modal.js to add click listener on new elements
-        $.ajax({
-          url: 'assets/photos_modal.js',
-          dataType: "script",
-        });
+        //add click listener on new elements
+        $newElems.click(clickModal(this.id, this.secret, this.farm, this.server));
 
         $newElems.animate({ opacity: 1 });
         $container.masonry('appended', $newElems, true);

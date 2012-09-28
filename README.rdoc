@@ -1,4 +1,14 @@
-GoSearchGo
-==========
+=GoSearchGo
+===========
 
-An image search using the Flickr API.
+GoSearchGo[http://gosearchgo.herokuapp.com] is an image search that uses the Flickr API to fetch geotagged images. When clicked, an AJAX request is sent to the API for information including latitude and longitude coordinates. The coordinates are used to display the location of where the image was taken/submitted on a static Google Map. Flickr authentication is handled by flickraw gem. The images and information are displayed on a modal using SimpleModal JQuery. Masonry and Infinitescroll handles image layout and pagination on images index.
+
+==Known Bugs
+  *Infinitescroll does not work if images displayed do not exceed browser height.
+  *Rails asset pipeline does not load JS. Manually loading JS files using javascript_include_tag.
+  *View scrolls back to the top if an image from page 1 is clicked.
+  *Flickr frequently return nothing on search results that normally yield images. Possibly an issue on Flickr's end or with request limits.
+  *Each Infinitescroll pagination call attempts to execute fetch_info (photos_controller) with an unknown parameter.
+
+==Incomplete Functionalities
+  *AJAX request to Google Places API to pull hotels based on latitude/longitude data. The API is currently not returning properly formatted JSON.

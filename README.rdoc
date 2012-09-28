@@ -1,7 +1,7 @@
 =GoSearchGo
 ===========
 
-GoSearchGo[http://gosearchgo.herokuapp.com] is an image search that uses the Flickr API to fetch geotagged images. When clicked, an AJAX request is sent to the API for information including latitude and longitude coordinates. The coordinates are used to display the location of where the image was taken/submitted on a static Google Map. Flickr authentication is handled by flickraw gem[http://hanklords.github.com/flickraw/]. The images and information are displayed on a modal using SimpleModal JQuery[http://www.ericmmartin.com/projects/simplemodal/]. Masonry[http://masonry.desandro.com/] and Infinitescroll[https://github.com/paulirish/infinite-scroll] handles image layout and pagination on images index.
+GoSearchGo[http://gosearchgo.herokuapp.com] is an image search that uses the Flickr API to fetch geotagged images. When clicked, an AJAX request is sent to the API for information including latitude and longitude coordinates. The coordinates are used to display the location of where the image was taken/submitted on a static Google Map. Flickr authentication is handled by flickraw[http://hanklords.github.com/flickraw/] gem. The images and information are displayed on a modal using SimpleModal JQuery[http://www.ericmmartin.com/projects/simplemodal/]. Masonry[http://masonry.desandro.com/] and Infinitescroll[https://github.com/paulirish/infinite-scroll] handles image layout and pagination on images index.
 
 ==Known Bugs
   *Infinitescroll does not work if images displayed do not exceed browser height.

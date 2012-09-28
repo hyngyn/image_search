@@ -9,7 +9,7 @@ GoSearchGo[http://gosearchgo.herokuapp.com] is an image search that uses the Fli
   *View scrolls back to the top if an image from page 1 is clicked.
   *Flickr frequently return nothing on search results that normally yield images. Possibly an issue on Flickr's end or with request limits.
   *Each Infinitescroll pagination call attempts to execute fetch_info (photos_controller) with an unknown parameter.
-
+  *Refactor chunk of HTML code in photos_modal.js.
 
 
 ==Incomplete Functionalities

@@ -16,4 +16,4 @@ GoSearchGo[http://gosearchgo.herokuapp.com] is an image search that uses the Fli
   *AJAX request to Google Places API to pull hotels based on latitude/longitude data. The API is currently not returning properly formatted JSON.
 
 
-The running application can be currently found at http://gosearchgo.herokuapp.com[http://gosearchgo.herokuapp.com].
+The running application can be currently found at http://gosearchgo.herokuapp.com.

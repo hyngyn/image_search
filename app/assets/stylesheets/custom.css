@@ -142,7 +142,7 @@ a img{
 }
 
 #photos_container{
-  width: 70%;
+  max-width: 920px;
   margin-top: 10px;
   margin: auto;
 }
@@ -185,7 +185,7 @@ a img{
 }
 
 #simplemodal-container{
-  height:390px;
+  height:410px;
   width:830px;
   color:#bbb;
   background-color:#333;
@@ -194,6 +194,7 @@ a img{
 }
 
 /* Modal Page */
+
 
 #modal_image img{
   float: left;
@@ -208,7 +209,7 @@ a img{
   width: 45%;
 }
 
-#modal_photo_attr{
+.modal_photo_attr{
   float: left;
   clear: left;
 }
@@ -219,7 +220,7 @@ a img{
 
 #modal_photo_location{
   float: left;
-  clear: right;
+  clear: left;
 }
 
 #googlemap_image{

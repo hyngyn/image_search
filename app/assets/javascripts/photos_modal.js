@@ -53,11 +53,12 @@ function clickModal(id, secret, farm, server) {
            "</div>" +
         "</div>"+
 
-        "<div id='modal_image'>"+
-          "<img src=\""+img_url+"\">"+
-        "</div>"+
-
         "<div id='modal_photo_info_container'>"+
+          "<div id='modal_image'>"+
+            "<img src=\""+img_url+"\">"+
+          "</div>"+
+
+
            "<div class='modal_photo_attr'>"
               +data.title+ 
            "</div>"+ 

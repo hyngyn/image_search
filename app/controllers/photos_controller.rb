@@ -3,7 +3,7 @@ class PhotosController < ApplicationController
   def index
     #variables for pagination
     @page = params[:page] || 1
-    @per_page = params[:per_page] || 20
+    @per_page = params[:per_page] || 30
 
     if params[:search].empty?
       redirect_to root_path

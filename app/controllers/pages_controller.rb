@@ -4,5 +4,4 @@ class PagesController < ApplicationController
     @title = "Home"
   end
 
-
 end

@@ -1,25 +1,22 @@
 <div class="body_container">
 
-
-    <% if @photos_array.empty? %>
-      <div id="no_result_text"><p>No results found for <%=params[:search]%>.</p></div>
-    <% end %>
+  <% if @photos_array.empty? %>
+    <div id="no_result_text"><p>No results found for <%=params[:search]%>.</p></div>
+  <% end %>
 
   <div id="photos_container">
-
 
     <% @photos_array.each do |photo| %>
  
       <!--Div for each photo with embedded data-->
       <%= content_tag "div", :class => "each_photo_container", :id => photo[:id], :data=>{:id=>photo[:id], :secret=>photo[:secret], :farm=>photo[:farm], :server=>photo[:server]} do %>
         <%= link_to '#', :onclick => 'clickModal(\''+photo[:id].to_s+'\', \''+photo[:secret].to_s+'\', \''+photo[:farm].to_s+'\', \''+photo[:server].to_s+'\')' do %>
-          <%= image_tag photo[:s_url]  %>
+          <%= image_tag photo[:s_url] %>
         <% end %>
       <% end %>
 
     <% end %>
-
-   
+ 
     <!-- Empty modal to be dynamically modified when images are clicked --> 
     <div class="basic_modal">
     </div>
@@ -29,7 +26,9 @@
 
   <!-- Pagination container -->
   <div id="page_navigation">
+
     <% if !@photos_array.empty? %>
+
       <!-- Disable Back button if page 1 -->
       <% if @page.to_i > 1 %>
         <div id="back_button">
@@ -44,7 +43,9 @@
       <div id="next_button">
         <%= link_to "Next", {:controller => "photos", :action => "index", :page => @page.to_i+1, :search => params[:search]}%>
       </div>
-     <% end %>
+ 
+    <% end %>
+
   </div>
 
 </div>

@@ -1,11 +1,9 @@
 class PhotosController < ApplicationController
 
   def index
-
     #variables for pagination
     @page = params[:page] || 1
     @per_page = params[:per_page] || 20
-
 
     if params[:search].empty?
       redirect_to root_path
@@ -19,14 +17,9 @@ class PhotosController < ApplicationController
       @photos_array = @photos.map do |photo|
         s_url = "http://farm#{photo.farm}.static.flickr.com/#{photo.server}/#{photo.id}_#{photo.secret}_m.jpg"
         data = {:s_url=>s_url, :id => photo.id, :secret => photo.secret, :farm => photo.farm, :server => photo.server}
-
       end
-      puts "COUNT => " + @photos_array.to_json
-
     end
-
   end
-
 
   # fetch_info - Fetches individual photo information
   # Input: photo id and secret
@@ -41,6 +34,5 @@ class PhotosController < ApplicationController
       end
     end
   end
-
 
 end

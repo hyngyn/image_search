@@ -1,6 +1,6 @@
 /* Default */
 
-@font-face {
+@font-face{
   font-family: 'BariolRegularRegular';
   src: url('fonts/bariol_regular-webfont.eot');
   src: url('fonts/bariol_regular-webfont.svg#BariolRegularRegular') format('svg'),
@@ -43,12 +43,12 @@ a:hover{
   color: #0084FA;
 }
 
-a img {
+a img{
   border:0;
 }
 
 
-.round {
+.round{
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
@@ -66,7 +66,7 @@ a img {
 
 /* Layout */
 #nav_logo{
-  width: 190px;
+  width: 160px;
   margin: auto;
 }
 
@@ -79,7 +79,7 @@ a img {
 }
 
 #navigation_menu{
-	background: #140d0a;
+  background: #140d0a;
 	height: 45px;
 	width: 100%;
 }
@@ -131,6 +131,7 @@ a img {
 }
 
 /* Photos Index */
+
 .each_photo_container{
   float: left;
   margin: 8px;
@@ -147,8 +148,8 @@ a img {
 }
 
 #no_result_text{
-  width: 25%;
-  margin: auto;
+  width: 100%;
+  text-align: center;
   clear: both;
 }
 
@@ -173,7 +174,6 @@ a img {
 
 /* Modal Overlay */
 
-
 .basic_modal{
   display: none;
 }
@@ -194,6 +194,7 @@ a img {
 }
 
 /* Modal Page */
+
 #modal_image img{
   float: left;
   margin: auto;
@@ -227,7 +228,26 @@ a img {
 
 /*Footer*/
 
-#footer{
-  height: 50px;
+
+/*Javascript*/
+
+
+#no_more_text{
+  height: 70px;
+  width: 100%;
+  color: white;
+  background: #140d0a;
+  margin-top: 10%;
+  bottom: 0;
+  position: absolute;
+  opacity:0.95;
+  filter:alpha(opacity=95);/*  For IE8 and earlier */
+}
+
+#no_more_text p{
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 18px auto;
 }
 

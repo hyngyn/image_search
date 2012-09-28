@@ -23,17 +23,15 @@
 
     <div id="navigation_menu">
       <div id="nav_logo">
-          <%= link_to "GoSearchGo", root_path %>
+        <%= link_to "GoSearchGo", root_path %>
       </div>
     </div>
 
     <%= yield %>
 
-    <div id="footer">
-    </div>
 
   </body>
 
-	<%= debug(params) if Rails.env.development? %>
+	<% debug(params) if Rails.env.development? %>
 
 </html>

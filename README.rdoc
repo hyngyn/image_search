@@ -10,5 +10,10 @@ GoSearchGo[http://gosearchgo.herokuapp.com] is an image search that uses the Fli
   *Flickr frequently return nothing on search results that normally yield images. Possibly an issue on Flickr's end or with request limits.
   *Each Infinitescroll pagination call attempts to execute fetch_info (photos_controller) with an unknown parameter.
 
+
+
 ==Incomplete Functionalities
   *AJAX request to Google Places API to pull hotels based on latitude/longitude data. The API is currently not returning properly formatted JSON.
+
+
+The running application can be currently found at http://gosearchgo.herokuapp.com[http://gosearchgo.herokuapp.com].

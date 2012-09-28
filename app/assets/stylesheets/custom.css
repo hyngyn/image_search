@@ -66,7 +66,6 @@ a img {
 
 /* Layout */
 #nav_logo{
-
   width: 190px;
   margin: auto;
 }
@@ -88,7 +87,6 @@ a img {
 .body_container{
   width: 100%;
   margin-top: 15px;
-
 }
 
 /* Home */
@@ -100,10 +98,8 @@ a img {
   margin: auto;
   background: #140d0a;
   margin-top: 10%;
-
   opacity:0.95;
   filter:alpha(opacity=95);/*  For IE8 and earlier */
-
 }
 
 #home_outer_container{
@@ -158,7 +154,8 @@ a img {
 
 #page_navigation{
   width: 70%;
-  margin: auto ;
+  margin: auto;
+  display: none;
 }
 
 #back_button{

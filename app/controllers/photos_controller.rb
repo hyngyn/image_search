@@ -19,7 +19,9 @@ class PhotosController < ApplicationController
       @photos_array = @photos.map do |photo|
         s_url = "http://farm#{photo.farm}.static.flickr.com/#{photo.server}/#{photo.id}_#{photo.secret}_m.jpg"
         data = {:s_url=>s_url, :id => photo.id, :secret => photo.secret, :farm => photo.farm, :server => photo.server}
+
       end
+      puts "COUNT => " + @photos_array.to_json
 
     end
 

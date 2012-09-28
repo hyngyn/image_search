@@ -1,7 +1,7 @@
 module ApplicationHelper
 
 	def title
-		base_title = "Image Search"
+		base_title = "GoSearchGo"
 		if @title.nil?
 			base_title
 		else

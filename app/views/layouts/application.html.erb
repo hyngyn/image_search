@@ -3,17 +3,16 @@
 <html>
   <head>
     <title><%= title %></title>
-    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= stylesheet_link_tag 'application', :media => 'all' %>
     <%= stylesheet_link_tag 'custom', :media => 'screen' %>
 
-    <%# javascript_include_tag "application" %>
-    <%= javascript_include_tag "http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"%>
-    <%= javascript_include_tag "jquery" %>
-    <%= javascript_include_tag "jquery.masonry.min" %>
-    <%= javascript_include_tag "jquery.infinitescroll.min" %>
-    <%= javascript_include_tag "jquery.simplemodal-1.4.3" %>
-    <%= javascript_include_tag "photos_masonry" %>
-    <%= javascript_include_tag "photos_modal" %>
+    <%# javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'jquery' %>
+    <%= javascript_include_tag 'jquery.masonry.min' %>
+    <%= javascript_include_tag 'jquery.infinitescroll.min' %>
+    <%= javascript_include_tag 'jquery.simplemodal-1.4.3' %>
+    <%= javascript_include_tag 'photos_masonry' %>
+    <%= javascript_include_tag 'photos_modal' %>
 
     <%= csrf_meta_tags %>
 
@@ -23,6 +22,9 @@
   <body>
 
     <div id="navigation_menu">
+      <div id="nav_logo">
+          <%= link_to "GoSearchGo", root_path %>
+      </div>
     </div>
 
     <%= yield %>

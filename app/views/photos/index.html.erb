@@ -1,10 +1,13 @@
 <div class="body_container">
 
-  <div id="index_header">
-    <h1>Let's look at <%=params[:search]%>:</h1>
-  </div>
+
+    <% if @photos_array.empty? %>
+      <div id="no_result_text"><p>No results found for <%=params[:search]%>.</p></div>
+    <% end %>
 
   <div id="photos_container">
+
+
     <% @photos_array.each do |photo| %>
  
       <!--Div for each photo with embedded data-->
@@ -26,22 +29,22 @@
 
   <!-- Pagination container -->
   <div id="page_navigation">
+    <% if !@photos_array.empty? %>
+      <!-- Disable Back button if page 1 -->
+      <% if @page.to_i > 1 %>
+        <div id="back_button">
+          <%= link_to "Back", {:controller => "photos", :action => "index", :page => @page.to_i-1, :search => params[:search]}%>
+        </div>
+      <% else %>
+        <div id="disabled_back_button">
+          <p>Back</p>
+        </div>
+      <% end %>
 
-    <!-- Disable Back button if page 1 -->
-    <% if @page.to_i > 1 %>
-      <div id="back_button">
-        <%= link_to "Back", {:controller => "photos", :action => "index", :page => @page.to_i-1, :search => params[:search]}%>
+      <div id="next_button">
+        <%= link_to "Next", {:controller => "photos", :action => "index", :page => @page.to_i+1, :search => params[:search]}%>
       </div>
-    <% else %>
-      <div id="disabled_back_button">
-        <p>Back</p>
-      </div>
-    <% end %>
-
-    <div id="next_button">
-      <%= link_to "Next", {:controller => "photos", :action => "index", :page => @page.to_i+1, :search => params[:search]}%>
-    </div>
-
+     <% end %>
   </div>
 
 </div>

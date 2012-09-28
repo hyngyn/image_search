@@ -65,6 +65,20 @@ a img {
 
 
 /* Layout */
+#nav_logo{
+
+  width: 190px;
+  margin: auto;
+}
+
+#nav_logo a{
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 5px;
+  float: left;
+  color: white;
+}
+
 #navigation_menu{
 	background: #140d0a;
 	height: 45px;
@@ -136,9 +150,10 @@ a img {
   margin: auto;
 }
 
-#index_header{
-  width: 70%;
-  margin: auto ;
+#no_result_text{
+  width: 25%;
+  margin: auto;
+  clear: both;
 }
 
 #page_navigation{

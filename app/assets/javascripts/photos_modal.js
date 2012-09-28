@@ -11,8 +11,6 @@
       var img_url = "http://farm"+photo_farm+".static.flickr.com/"+photo_server+"/"+photo_id+"_"+photo_secret+".jpg";
 
 
-
-
       //Disable cache for AJAX requests for IE purposes
       $.ajaxSetup({ cache: false });
 
@@ -71,7 +69,6 @@
             "</div>"
                  
            );
-
 
 
           //displays modal

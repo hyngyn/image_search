@@ -1,20 +1,21 @@
 <div id="img_bg">    
-<div id="home_outer_container">
+  <div id="home_outer_container">
 
-  <div id="home_search_container" class="round">
+    <div id="home_search_container" class="round">
 
-  <h1 id="home_header">What do you want to see?</h1>
+    <h1 id="home_header">What do you want to see?</h1>
 
-  <%= form_tag photos_path, :method => 'get' do %>	
-    <div class="field">
-      <%= text_field_tag :search, params[:search], :placeholder => "i.e. San Francisco, Giraffe, Trees" %>
+    <!-- Search bar -->
+    <%= form_tag photos_path, :method => 'get' do %>	
+      <div class="field">
+        <%= text_field_tag :search, params[:search], :placeholder => "i.e. San Francisco, Giraffe, Trees" %>
+      </div>
+
+      <div class="action">
+        <%= submit_tag ">", :name => nil, :id => "home_submit" %>
+      </div>
+    <% end %>
+
     </div>
-
-    <div class="action">
-     <%= submit_tag ">", :name => nil, :id => "home_submit" %>
-    </div>
-  <% end %>
-
   </div>
-</div>
 </div>

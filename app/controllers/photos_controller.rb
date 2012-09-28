@@ -1,6 +1,8 @@
 class PhotosController < ApplicationController
 
   def index
+
+    #variables for pagination
     @page = params[:page] || 1
     @per_page = params[:per_page] || 40
 
@@ -9,25 +11,27 @@ class PhotosController < ApplicationController
       redirect_to root_path
     else
       @title = params[:search]
-      @photos  = flickr.photos.search(:tags => params[:search], :has_geo => 1, 
-                                      :per_page => @per_page, :page => @page)
-      
-      @photos_array = []
-    
-      @photos.each do |photo|
 
-   
-        url = "http://farm#{photo.farm}.static.flickr.com/#{photo.server}/#{photo.id}_#{photo.secret}.jpg"
+      #Fetches photos from flickr (@photo.class = FlickRaw)
+      @photos  = flickr.photos.search(:tags => params[:search], :has_geo => 1, 
+                                      :per_page => @per_page, :page => @page)     
+    
+      @photos_array = @photos.map do |photo|
         s_url = "http://farm#{photo.farm}.static.flickr.com/#{photo.server}/#{photo.id}_#{photo.secret}_m.jpg"
-        data = {:url=>url, :s_url=>s_url, :id => photo.id, :secret => photo.secret}
-        @photos_array << data
+        data = {:s_url=>s_url, :id => photo.id, :secret => photo.secret, :farm => photo.farm, :server => photo.server}
       end
+
     end
 
   end
 
 
+  # fetch_info - Fetches individual photo information
+  # Input: photo id and secret
+  # Output: photo information as JSON
+
   def fetch_info
+
     @info = flickr.photos.getInfo(:photo_id => params[:id], :secret=> params[:secret])
  
     respond_to do |format|
@@ -36,22 +40,5 @@ class PhotosController < ApplicationController
 
   end
 
-
-#  def fetch_hotel
-#    google_url = "https://maps.googleapis.com/maps/api/place/search/json?location=" + params[:location] + "&radius=" + params[:radius] + "&key=" + params[:key] + "&sensor=false&types=lodging"
-   
-#    puts google_url
-#    x = %Q{"admin=true"}
-
-#    @hotels = Hash.from_xml(%x{curl -d "#{x}" "https://maps.googleapis.com/maps/api/place/search/json?location=30.000,30.000&radius=500&key=AIzaSyChTo6XTAUpKdgUtgY0xH4FSO-fzfR8WsE&sensor=false&types=lodging"} ) rescue nil
-
-#    puts @hotels
-#    puts "WINNER"
-
-
-#    respond_to do |format|
-#      format.json { render :json => @hotels }
-#    end
-#  end
 
 end
